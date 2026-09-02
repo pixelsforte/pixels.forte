@@ -12,44 +12,9 @@ const inter = Inter({
   display: "swap",
 });
 
+// Sirf Variable Font istemal karein (sare weights automatically handle ho jayenge)
 const parkinsans = localFont({
-  src: [
-    {
-      path: "../public/fonts/static/Parkinsans-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/static/Parkinsans-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/static/Parkinsans-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/static/Parkinsans-SemiBold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/static/Parkinsans-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/static/Parkinsans-ExtraBold.ttf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Parkinsans-VariableFont_wght.ttf",
-      weight: "100 900",
-      style: "normal",
-    },
-  ],
+  src: "../public/fonts/Parkinsans-VariableFont_wght.ttf",
   variable: "--font-parkinsans",
   display: "swap",
 });
@@ -72,10 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${parkinsans.variable} ${inter.variable}`}>
       <head>
-        <link rel="icon" href="/logo-3.png" type="image/png" />
-        <link rel="shortcut icon" href="/logo-3.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo-3.png" />
-        {/* Priority Preloading for Above-the-Fold Hero Media */}
+        {/* Icons ki zaroorat nahi hai yahan, metadata handles it */}
         <link rel="preload" href="/images/card1.webp" as="image" type="image/webp" fetchPriority="high" />
         <link rel="preload" href="/videos/card5-1-1.mp4" as="video" type="video/mp4" fetchPriority="high" />
         <link rel="preload" href="/videos/card11-1-1.mp4" as="video" type="video/mp4" fetchPriority="high" />
@@ -90,4 +52,3 @@ export default function RootLayout({
     </html>
   );
 }
-
