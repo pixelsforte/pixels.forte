@@ -1,0 +1,534 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
+import cardStorytelling from "@/assets/card-storytelling.jpg";
+import cardCampaign from "@/assets/card-campaign.jpg";
+import cardUiux from "@/assets/card-uiux.jpg";
+import workOrange from "@/assets/work-orange.jpg";
+import workCubes from "@/assets/work-cubes.jpg";
+import partnershipSphere from "@/assets/partnership-sphere.jpg";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import footerPortrait from "@/assets/footer-portrait.jpg";
+import tilePopsicle from "@/assets/tile-popsicle.jpg";
+import tileMirror from "@/assets/tile-mirror.jpg";
+import tileBlur from "@/assets/tile-blur.jpg";
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
+import avatar3 from "@/assets/avatar-3.jpg";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Idotive — Creative Studio for Bold Brands" },
+      { name: "description", content: "Strategy, identity, advertising and motion. We help brands stand out with creative work that performs." },
+      { property: "og:title", content: "Idotive — Creative Studio for Bold Brands" },
+      { property: "og:description", content: "Strategy, identity, advertising and motion that move audiences." },
+    ],
+  }),
+  component: Index,
+});
+
+const galleryCards = [
+  { img: cardStorytelling, label: "Visual storytelling" },
+  { img: cardCampaign, label: "Campaign highlights" },
+  { img: cardUiux, label: "UI/UX projects" },
+  { img: workCubes, label: "Design systems" },
+  { img: workOrange, label: "Brand films" },
+  { img: tileBlur, label: "Editorial" },
+  { img: tileMirror, label: "Photography" },
+  { img: tilePopsicle, label: "Product shoots" },
+];
+
+function Asterisk({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 60 60" className={className} aria-hidden>
+      {Array.from({ length: 8 }).map((_, i) => (
+        <rect
+          key={i}
+          x="27" y="6" width="6" height="48" rx="3"
+          fill="currentColor"
+          transform={`rotate(${(i * 360) / 8} 30 30)`}
+        />
+      ))}
+    </svg>
+  );
+}
+
+function Nav() {
+  return (
+    <header className="fixed top-0 inset-x-0 z-50">
+      <div className="mx-auto mt-4 flex max-w-[1400px] items-center justify-between rounded-full border border-foreground/10 bg-background/70 px-5 py-3 backdrop-blur-md">
+        <a href="#top" className="flex items-center gap-2">
+          <Asterisk className="h-5 w-5 text-[color:var(--accent)]" />
+          <span className="font-display text-lg font-bold tracking-tight">idotive</span>
+        </a>
+        <nav className="hidden gap-8 text-sm font-medium md:flex">
+          {["Work", "Services", "Studio", "Journal", "Contact"].map((l) => (
+            <a key={l} href={`#${l.toLowerCase()}`} className="story-link text-foreground/80 hover:text-foreground">
+              {l}
+            </a>
+          ))}
+        </nav>
+        <a
+          href="#contact"
+          className="group inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
+        >
+          Start a project
+          <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+    </header>
+  );
+}
+
+function Hero() {
+  return (
+    <section id="top" className="relative overflow-hidden pt-32">
+      <div className="mx-auto max-w-[1400px] px-6">
+        {/* 3D rotating card gallery */}
+        <div className="gallery-3d mx-auto h-[460px]">
+          <div
+            className="gallery-3d__stage"
+            style={
+              {
+                // expose card count for math below
+              } as React.CSSProperties
+            }
+          >
+            {galleryCards.map((c, i) => {
+              const angle = (i * 360) / galleryCards.length;
+              const transform = `rotateY(${angle}deg) translateZ(420px)`;
+              return (
+                <div
+                  key={c.label}
+                  className="gallery-3d__card"
+                  style={{ transform, ["--card-transform" as never]: transform }}
+                >
+                  <img src={c.img} alt={c.label} loading="lazy" />
+                  <span>{c.label}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* center asterisk overlapping */}
+        <div className="relative -mt-20 flex justify-center">
+          <Asterisk className="spin-slow h-16 w-16 text-[color:var(--accent)]" />
+        </div>
+
+        {/* Heading */}
+        <div className="mt-10 grid items-end gap-10 md:grid-cols-[1.1fr_1fr]">
+          <h1 className="text-[14vw] font-extrabold leading-[0.85] tracking-tight md:text-[8.5vw]">
+            Creative<br />
+            studio for<br />
+            <span className="italic font-display text-[color:var(--accent)]">bold</span> brands.
+          </h1>
+
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-3">
+                {[avatar1, avatar2, avatar3].map((a, i) => (
+                  <img
+                    key={i}
+                    src={a}
+                    alt=""
+                    loading="lazy"
+                    className="h-14 w-14 rounded-full border-4 border-background object-cover"
+                  />
+                ))}
+              </div>
+              <button className="ml-1 flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--accent)] text-2xl text-white transition-transform hover:rotate-90">+</button>
+            </div>
+            <p className="max-w-md text-foreground/70">
+              We help brands bring their vision to life through design, storytelling, and strategy —
+              creating impactful experiences that engage audiences and strengthen brand identity.
+            </p>
+            <a href="#work" className="inline-flex items-center gap-3 rounded-md bg-foreground px-6 py-3 text-sm font-semibold tracking-wider text-background transition-transform hover:-translate-y-0.5">
+              LEARN MORE
+            </a>
+
+            <div className="flex flex-wrap gap-3 pt-2">
+              {["Strategy", "Storytelling", "Digital thinking"].map((p) => (
+                <span key={p} className="pill cursor-default">{p}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* stats + tiles */}
+        <div className="mt-16 grid items-center gap-8 md:grid-cols-[auto_auto_1fr]">
+          <div>
+            <div className="font-display text-5xl font-bold">98%</div>
+            <div className="text-xs tracking-widest text-foreground/60">CLIENT HAPPINESS RATE</div>
+          </div>
+          <div className="hidden h-12 w-px bg-foreground/15 md:block" />
+          <div className="flex flex-wrap items-center justify-between gap-6">
+            <div>
+              <div className="font-display text-5xl font-bold">300+</div>
+              <div className="text-xs tracking-widest text-foreground/60">BRANDS TRANSFORMED</div>
+            </div>
+            <div className="flex gap-4">
+              {[tilePopsicle, tileMirror, tileBlur].map((t, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -8, rotate: i % 2 === 0 ? -2 : 2, scale: 1.04 }}
+                  transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                  className="zoom-wrap h-24 w-32 overflow-hidden rounded-xl shadow-[var(--shadow-soft)]"
+                >
+                  <img src={t} alt="" loading="lazy" className="h-full w-full object-cover" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FeaturedWork() {
+  return (
+    <section id="work" className="mt-32">
+      <div className="mx-auto max-w-[1400px] px-6">
+        <h2 className="text-center font-display text-[16vw] font-extrabold leading-none md:text-[12vw]">
+          Featured <span className="italic">work</span>
+        </h2>
+        <div className="mx-auto my-6 h-10 w-px bg-foreground/30" />
+        <p className="mx-auto max-w-xl text-center text-foreground/70">
+          Discover our standout projects where creativity meets strategy and storytelling. Each piece shows
+          how we help brands connect, build identity, and achieve results across every platform.
+        </p>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-[1.4fr_1fr]">
+          <WorkCard
+            img={workOrange}
+            tag="Experiential design"
+            tags={["Brand guidelines", "Editorial design"]}
+            marqueeLabel="Experiential design"
+            big
+          />
+          <WorkCard
+            img={workCubes}
+            tag="Visionary designs"
+            tags={["Corporate identity", "Campaign print"]}
+            marqueeLabel="Visionary designs"
+          />
+        </div>
+
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <WorkCard
+            img={cardCampaign}
+            tag="Advertising with edge"
+            tags={["Corporate identity", "Campaign print"]}
+            marqueeLabel="Advertising campaigns"
+          />
+          <WorkCard
+            img={cardUiux}
+            tag="Advertising campaigns"
+            tags={["Brand identity", "Print design"]}
+            marqueeLabel="Visionary designs"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WorkCard({
+  img, tag, tags, marqueeLabel, big = false,
+}: {
+  img: string; tag: string; tags: string[]; marqueeLabel: string; big?: boolean;
+}) {
+  return (
+    <article className="group">
+      <div className={`zoom-wrap relative ${big ? "h-[460px]" : "h-[300px]"} overflow-hidden rounded-2xl bg-muted`}>
+        <img src={img} alt={tag} loading="lazy" className="h-full w-full object-cover" />
+        {/* marquee overlay on hover */}
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 bg-background/85 py-3 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
+          <div className="marquee">
+            <div className="marquee__track text-sm font-semibold uppercase tracking-widest">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <span key={i} className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]" />
+                  {marqueeLabel}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <span className="arrow-btn">↗</span>
+          </div>
+        </div>
+      </div>
+      <div className="mt-5 flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-xl font-bold">{tag}</h3>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {tags.map((t) => (
+              <span key={t} className="pill cursor-default">{t}</span>
+            ))}
+          </div>
+        </div>
+        <a href="#" className="arrow-btn">→</a>
+      </div>
+    </article>
+  );
+}
+
+function Services() {
+  const items = [
+    { n: "01", title: "Brand strategy", desc: "We shape strategies that define your brand and build meaningful audience connections, powered by insight, data, and purposeful storytelling." },
+    { n: "02", title: "Visual identity design", desc: "We design striking visual identities that reflect your brand's values and personality, combining logos, colors, and typography for a memorable presence." },
+    { n: "03", title: "Advertising & campaigns", desc: "We craft campaigns that capture attention and drive results, combining creative concepts, compelling visuals, and strategic messaging across all channels." },
+    { n: "04", title: "Motion graphics & video", desc: "From concept to final cut, we create videos and animations that captivate audiences, build emotion, and amplify your brand message." },
+  ];
+  return (
+    <section id="services" className="mt-32">
+      <div className="mx-auto max-w-[1400px] px-6">
+        <div className="mb-12 text-center">
+          <p className="text-xs font-semibold tracking-widest text-foreground/60">OUR SERVICE</p>
+          <h2 className="mt-2 font-display text-5xl font-extrabold md:text-6xl">
+            Where creative thinking meets<br />strategic brand impact
+          </h2>
+        </div>
+        <ul className="divide-y divide-foreground/10 overflow-hidden rounded-3xl border border-foreground/10 bg-card">
+          {items.map((s) => (
+            <li key={s.n} className="group">
+              <div className="grid items-center gap-6 px-6 py-8 transition-colors duration-500 group-hover:bg-foreground group-hover:text-background md:grid-cols-[80px_1fr_1fr_60px]">
+                <span className="font-display text-xl font-semibold opacity-70">{s.n}</span>
+                <h3 className="text-2xl font-bold transition-transform duration-500 group-hover:translate-x-2 md:text-3xl">{s.title}</h3>
+                <p className="text-sm opacity-70">{s.desc}</p>
+                <div className="flex justify-end">
+                  <svg viewBox="0 0 24 24" className="h-9 w-9 transition-transform duration-500 group-hover:rotate-45" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                  </svg>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function BlackBanner() {
+  return (
+    <section className="mt-24 px-6">
+      <div className="mx-auto max-w-[1400px] overflow-hidden rounded-3xl bg-foreground px-8 py-20 text-background md:px-16 md:py-28">
+        <h2 className="font-display text-5xl font-extrabold leading-tight md:text-7xl">
+          Every step carefully<br />
+          crafted to push your brand<br />
+          forward with purpose
+        </h2>
+      </div>
+    </section>
+  );
+}
+
+function PartnershipCards() {
+  const cards = [
+    { img: partnershipSphere, title: "Collaborative partnership", desc: "We partner with you every step of the way, combining your vision with our creative expertise to craft impactful, meaningful brand experiences." },
+    { img: workOrange, title: "Results-driven design", desc: "We create performance-driven designs that go beyond visuals. Every pixel and creative idea is shaped by insight, strategy, and results you can measure." },
+  ];
+  return (
+    <section className="bg-foreground py-24">
+      <div className="mx-auto grid max-w-[1400px] gap-10 px-6 md:grid-cols-2">
+        {cards.map((c) => (
+          <div key={c.title} className="tilt overflow-hidden rounded-3xl bg-card">
+            <div className="zoom-wrap h-72 overflow-hidden">
+              <img src={c.img} alt="" loading="lazy" className="h-full w-full object-cover" />
+            </div>
+            <div className="grid gap-4 p-8 md:grid-cols-[1fr_1.4fr]">
+              <h3 className="text-2xl font-bold">{c.title}</h3>
+              <p className="text-sm text-foreground/70">{c.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Testimonial() {
+  return (
+    <section id="studio" className="mt-32">
+      <div className="mx-auto max-w-[1400px] px-6">
+        <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr_auto]">
+          <div className="zoom-wrap overflow-hidden rounded-3xl">
+            <img src={testimonial1} alt="James Walker" loading="lazy" className="h-[460px] w-full object-cover" />
+          </div>
+          <div>
+            <h2 className="font-display text-4xl font-extrabold md:text-5xl">
+              Brands we've helped
+            </h2>
+            <p className="mt-4 max-w-md text-foreground/70">
+              See how we help brands grow through smart strategy, bold design, and impactful campaigns that engage audiences and drive lasting results.
+            </p>
+            <blockquote className="mt-10 max-w-md text-lg font-medium leading-snug">
+              "From concept to execution, their expertise in strategy, design and campaigns elevated our brand —
+              delivering creative solutions that resonate with our audience and drive real results."
+            </blockquote>
+            <div className="mt-6 flex items-center gap-4">
+              <span className="font-bold">James Walker</span>
+              <span className="text-foreground/40">→</span>
+              <span className="text-sm text-foreground/60">CEO, Summit Digital</span>
+            </div>
+            <div className="mt-2 text-[color:var(--accent)] tracking-widest">★★★★★</div>
+          </div>
+          <div className="flex flex-col gap-3">
+            {[tileBlur, testimonial1, footerPortrait].map((t, i) => (
+              <motion.button
+                key={i}
+                whileHover={{ scale: 1.07 }}
+                className="zoom-wrap h-24 w-24 overflow-hidden rounded-xl"
+              >
+                <img src={t} alt="" loading="lazy" className="h-full w-full object-cover" />
+              </motion.button>
+            ))}
+            <button className="arrow-btn mx-auto mt-2">↓</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StrategyGrid() {
+  const cards = [
+    { title: "Bold ideas, clear vision", desc: "Concepts that cut through noise and translate into measurable brand outcomes.", img: cardUiux },
+    { title: "Designed to perform", desc: "Aesthetic and engineering working together — pixel-perfect, fast, accessible.", img: cardCampaign },
+    { title: "Strategy meets creativity", desc: "We combine insight and imagination to design brands that inspire, connect, and perform with measurable results.", img: tileMirror },
+    { title: "Results that matter", desc: "Every project is focused on real impact: measurable growth, engagement, and brand awareness.", img: tileBlur },
+  ];
+  return (
+    <section className="mt-32">
+      <div className="mx-auto max-w-[1400px] px-6">
+        <div className="grid gap-6 md:grid-cols-4">
+          {cards.map((c) => (
+            <article key={c.title} className="lift relative flex h-[360px] flex-col justify-between rounded-3xl border border-foreground/10 bg-card p-6">
+              <div>
+                <h3 className="text-xl font-bold leading-tight">{c.title}</h3>
+                <p className="mt-3 text-sm text-foreground/70">{c.desc}</p>
+              </div>
+              <div className="zoom-wrap h-28 overflow-hidden rounded-xl">
+                <img src={c.img} alt="" loading="lazy" className="h-full w-full object-cover" />
+              </div>
+              <div className="mt-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest">
+                <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]" /> Learn more
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="flex -space-x-3">
+              {[avatar1, avatar2, avatar3].map((a, i) => (
+                <img key={i} src={a} alt="" loading="lazy" className="h-12 w-12 rounded-full border-4 border-background object-cover" />
+              ))}
+            </div>
+            <div>
+              <div className="font-display text-2xl font-bold">60+</div>
+              <div className="text-xs tracking-widest text-foreground/60">EXPERT MEMBERS</div>
+            </div>
+          </div>
+          <button className="group flex items-center gap-3">
+            <span className="flex h-24 w-24 items-center justify-center rounded-full border border-foreground/30 text-sm font-semibold transition-transform group-hover:rotate-90">
+              +<br />EXPLORE
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DifferenceCta() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.85, 1.05, 1.25]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [-4, 4]);
+
+  return (
+    <section ref={ref} className="relative mt-40 overflow-hidden py-24">
+      <div className="mx-auto max-w-[1400px] px-6">
+        <h2 className="relative text-center font-display text-[18vw] font-extrabold leading-none text-foreground/15 md:text-[14vw]">
+          difference
+          <motion.div
+            style={{ scale, rotate }}
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src={footerPortrait} alt="" loading="lazy" className="h-[280px] w-[240px] rounded-2xl object-cover shadow-[var(--shadow-card)]" />
+          </motion.div>
+        </h2>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer id="contact" className="bg-foreground text-background">
+      <div className="mx-auto max-w-[1400px] px-6 py-16">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-2">
+              <Asterisk className="h-6 w-6 text-[color:var(--accent)]" />
+              <span className="font-display text-2xl font-bold">idotive</span>
+            </div>
+            <p className="mt-6 text-sm uppercase tracking-widest text-background/60">Mail :</p>
+            <a href="mailto:hello@idotive.com" className="story-link mt-2 inline-block text-xl font-semibold">hello@idotive.com</a>
+          </div>
+
+          <div className="space-y-3">
+            {[
+              ["Dribbble", "↗"], ["Instagram", "↗"], ["Facebook", "↗"], ["Behance", "↗"],
+            ].map(([l, i]) => (
+              <a key={l} href="#" className="story-link block text-2xl font-bold">
+                {l} <span className="text-base">{i}</span>
+              </a>
+            ))}
+          </div>
+
+          <div className="space-y-2 text-sm">
+            {["Home", "Service one", "Service two", "Service three"].map((l) => (
+              <a key={l} href="#" className="story-link block text-background/80">{l}</a>
+            ))}
+          </div>
+          <div className="space-y-2 text-sm">
+            {["Portfolio one", "Portfolio two", "Portfolio three", "License", "Style guide", "Changelog"].map((l) => (
+              <a key={l} href="#" className="story-link block text-background/80">{l}</a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-background/10 pt-6 text-xs text-background/50 md:flex-row">
+          <p>© {new Date().getFullYear()} Idotive Studio. All rights reserved.</p>
+          <p>Crafted with care — Strategy · Identity · Motion</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Index() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+      <main>
+        <Hero />
+        <FeaturedWork />
+        <Services />
+        <BlackBanner />
+        <PartnershipCards />
+        <Testimonial />
+        <StrategyGrid />
+        <DifferenceCta />
+      </main>
+      <Footer />
+    </div>
+  );
+}
