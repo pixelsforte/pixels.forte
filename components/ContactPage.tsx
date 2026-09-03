@@ -52,10 +52,10 @@ export default function ContactPage() {
           {/* Left: Collaborator / Creative Director Info (No image as requested) */}
           <div className="md:col-span-4 lg:col-span-3.5 p-6 sm:p-10 md:border-r border-black/10 flex flex-col justify-center text-left">
             <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">
-              Mirza Hashim Ali Baig
+              Hashim Ali
             </h3>
             <p className="text-xs sm:text-sm text-neutral-500 font-medium mt-1">
-              Creative Director &amp; Lead
+              Creative Director
             </p>
           </div>
 
