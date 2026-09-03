@@ -113,36 +113,36 @@ export const PORTFOLIO_PROJECTS: Record<string, PortfolioProject> = {
     ]
   },
 
-  "aspire-global": {
-    id: "aspire-global",
-    title: "Aspire Global Solution",
-    subtitle: "Business Services Platform",
-    category: "ENTERPRISE SERVICES",
-    bannerImage: "/portfolio/Aspire_global_solution.jpeg",
-    galleryImages: [
-      "/portfolio/Aspire_global_solution_1.jpeg"
-    ],
-    tags: ["Business Services", "Corporate Web", "Stationery"],
-    description: {
-      heading: "Aspire Global Solution – Business Services Platform",
-      subheading: "Aspire Global Solution – Project Description",
-      paragraphs: [
-        "Aspire Global Solution is a business services company that helps organisations grow through HR solutions, travel services, creative services, financial support, insurance, taxation, and digital marketing. The project focused on building a professional online platform that clearly presents the company's wide range of services, strengthens its global brand presence, and makes it easy for clients to explore solutions and connect with the team.",
-        "The website features a clean, professional interface with a structured navigation system, engaging service highlights, and strategic call-to-action sections that guide users through the customer journey. Supported by cohesive branding and marketing collateral, the project delivers a trustworthy digital presence that reflects the company's commitment to growth."
-      ]
-    },
-    deliverables: [
-      "Corporate Web Portal",
-      "Branded Stationery",
-      "Service Architecture",
-      "Marketing Collateral",
-      "Lead Generation UI"
-    ],
-    colorPalette: [
-      { name: "Deep Navy", hex: "#0f172a" },
-      { name: "Pure White", hex: "#ffffff" }
-    ]
-  },
+  // "aspire-global": {
+  //   id: "aspire-global",
+  //   title: "Aspire Global Solution",
+  //   subtitle: "Business Services Platform",
+  //   category: "ENTERPRISE SERVICES",
+  //   bannerImage: "/portfolio/Aspire_global_solution.jpeg",
+  //   galleryImages: [
+  //     "/portfolio/Aspire_global_solution_1.jpeg"
+  //   ],
+  //   tags: ["Business Services", "Corporate Web", "Stationery"],
+  //   description: {
+  //     heading: "Aspire Global Solution – Business Services Platform",
+  //     subheading: "Aspire Global Solution – Project Description",
+  //     paragraphs: [
+  //       "Aspire Global Solution is a business services company that helps organisations grow through HR solutions, travel services, creative services, financial support, insurance, taxation, and digital marketing. The project focused on building a professional online platform that clearly presents the company's wide range of services, strengthens its global brand presence, and makes it easy for clients to explore solutions and connect with the team.",
+  //       "The website features a clean, professional interface with a structured navigation system, engaging service highlights, and strategic call-to-action sections that guide users through the customer journey. Supported by cohesive branding and marketing collateral, the project delivers a trustworthy digital presence that reflects the company's commitment to growth."
+  //     ]
+  //   },
+  //   deliverables: [
+  //     "Corporate Web Portal",
+  //     "Branded Stationery",
+  //     "Service Architecture",
+  //     "Marketing Collateral",
+  //     "Lead Generation UI"
+  //   ],
+  //   colorPalette: [
+  //     { name: "Deep Navy", hex: "#0f172a" },
+  //     { name: "Pure White", hex: "#ffffff" }
+  //   ]
+  // },
 
   "ev-charging": {
     id: "ev-charging",

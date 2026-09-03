@@ -753,7 +753,7 @@ export default function ServicesTwoPage() {
         </section>
 
         {/* SECTION 9: TESTIMONIALS SECTION */}
-        <Testimonials />
+        {/* <Testimonials /> */}
 
       </main>
 
