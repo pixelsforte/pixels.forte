@@ -131,7 +131,7 @@ export default function Header ({ activePage, setActivePage, onContactClick, tra
           <div className="relative flex items-center h-12 sm:h-16 md:h-20 w-[190px] sm:w-[260px] md:w-[320px] overflow-visible">
             <Image
               src="/logo-2.png"
-              alt="Pixel Forte"
+              alt="Pixels Forte"
               fill
               className="object-contain object-left scale-[1.45] sm:scale-[1.65] origin-left transition-opacity duration-300 group-hover:opacity-85"
               priority

@@ -27,9 +27,9 @@ export default function ContactPage() {
   };
 
   const socials = [
-    { name: "Dribbble", href: "https://dribbble.com" },
-    { name: "Instagram", href: "https://instagram.com" },
-    { name: "Facebook", href: "https://facebook.com" },
+    { name: "Behance", href: "https://www.behance.net/pixels-forte" },
+    { name: "Instagram", href: "https://www.instagram.com/pixels.forte/" },
+    { name: "Linkedin", href: "https://www.linkedin.com/company/pixels-forte-private-limited/" },
   ];
 
   return (
@@ -52,7 +52,7 @@ export default function ContactPage() {
           {/* Left: Collaborator / Creative Director Info (No image as requested) */}
           <div className="md:col-span-4 lg:col-span-3.5 p-6 sm:p-10 md:border-r border-black/10 flex flex-col justify-center text-left">
             <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight">
-              Abdul Rehman
+              Mirza Hashim Ali Baig
             </h3>
             <p className="text-xs sm:text-sm text-neutral-500 font-medium mt-1">
               Creative Director &amp; Lead

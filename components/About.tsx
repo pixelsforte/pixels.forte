@@ -175,7 +175,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.2, once: false }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-neutral-400"
+          className="mb-6 text-xs font-bold upperlower tracking-[0.25em] text-neutral-400"
         >
           About Us
         </motion.div>
@@ -281,7 +281,7 @@ export default function About() {
               viewport={{ amount: 0.2, once: false }}
               transition={{ duration: 0.85, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
               href="#contact"
-              className="group relative inline-flex h-[36px] items-center justify-center overflow-hidden rounded-none bg-black px-5 text-[11px] font-bold uppercase tracking-wider text-white transition-colors duration-300"
+              className="group relative inline-flex h-[36px] items-center justify-center overflow-hidden rounded-none bg-black px-5 text-[11px] font-bold upperlower tracking-wider text-white transition-colors duration-300"
             >
               <span className="absolute inset-0 h-full w-full translate-y-full bg-[#f26b2c] transition-transform duration-300 ease-out group-hover:translate-y-0"></span>
               <span className="relative z-10 block h-4 overflow-hidden">
@@ -313,7 +313,7 @@ export default function About() {
               <div className="font-display text-[2.2rem] sm:text-[3rem] lg:text-[3.2rem] font-bold leading-none tracking-tighter text-neutral-900 flex items-center">
                 <Counter value={98} />%
               </div>
-              <div className="mt-1 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-400">
+              <div className="mt-1 text-[9px] sm:text-[10px] font-bold upperlower tracking-[0.15em] text-neutral-400">
                 Client happiness rate
               </div>
             </div>
@@ -324,7 +324,7 @@ export default function About() {
               <div className="font-display text-[2.2rem] sm:text-[3rem] lg:text-[3.2rem] font-bold leading-none tracking-tighter text-neutral-900 flex items-center">
                 <Counter value={300} />+
               </div>
-              <div className="mt-1 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-400">
+              <div className="mt-1 text-[9px] sm:text-[10px] font-bold upperlower tracking-[0.15em] text-neutral-400">
                 Brands transformed
               </div>
             </div>
@@ -341,7 +341,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ amount: 0.2, once: false }}
                   transition={{ duration: 0.75, delay: 0.15 + idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="rounded-full border border-neutral-300 px-3 sm:px-4 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-neutral-800 bg-white/60 backdrop-blur-sm"
+                  className="rounded-full border border-neutral-300 px-3 sm:px-4 py-1 text-[10px] sm:text-[11px] font-semibold upperlower tracking-wider text-neutral-800 bg-white/60 backdrop-blur-sm"
                 >
                   {pill}
                 </motion.span>

@@ -199,7 +199,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-[11px] font-bold tracking-[0.3em] text-white/90 uppercase mb-3"
+            className="text-[11px] font-bold tracking-[0.3em] text-white/90 upperlower mb-3"
           >
             VISION TO LIFE
           </motion.p>
@@ -217,7 +217,7 @@ export default function AboutPage() {
       {/* SECTION 2: BRAND SUCCESS */}
       <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-start gap-4 mb-16 text-left">
-          <span className="inline-block bg-[#f26b2c] text-white text-[10px] font-bold tracking-[0.2em] px-4 py-1.5 rounded-none uppercase">
+          <span className="inline-block bg-[#f26b2c] text-white text-[10px] font-bold tracking-[0.2em] px-4 py-1.5 rounded-none upperlower">
             BRAND SUCCESS
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight max-w-4xl">
@@ -253,7 +253,7 @@ export default function AboutPage() {
               </div>
 
               {/* Button: LEARN MORE with Premium Sliding Text Effect */}
-              <button className="group/btn relative flex h-[36px] items-center justify-center overflow-hidden rounded-none border border-black/10 px-4 text-[9px] font-bold tracking-widest uppercase text-black hover:text-[#f26b2c] transition-colors duration-300 pt-0 cursor-pointer">
+              <button className="group/btn relative flex h-[36px] items-center justify-center overflow-hidden rounded-none border border-black/10 px-4 text-[9px] font-bold tracking-widest upperlower text-black hover:text-[#f26b2c] transition-colors duration-300 pt-0 cursor-pointer">
                 {/* Sliding Background */}
                 <span className="absolute inset-0 h-full w-full translate-y-full bg-black/5 transition-transform duration-300 ease-out group-hover/btn:translate-y-0" />
                 <span className="relative z-10 flex items-center gap-1.5">
@@ -269,7 +269,7 @@ export default function AboutPage() {
       {/* SECTION 3: METRICS GRID SECTION */}
       <section className="py-20 bg-[#faf8f4] border-t border-b border-black/5 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-black tracking-tight text-left mb-8 sm:mb-12 uppercase max-w-2xl">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-black tracking-tight text-left mb-8 sm:mb-12 upperlower max-w-2xl">
             Successful projects delivered with proven client satisfaction
           </h2>
 
@@ -281,7 +281,7 @@ export default function AboutPage() {
               className="bg-black text-white rounded-none p-8 flex flex-col justify-between min-h-[360px] relative overflow-hidden group border border-white/5 cursor-pointer"
             >
               <div className="flex justify-between items-start z-10">
-                <h3 className="text-2xl font-bold uppercase tracking-tight max-w-[150px]">
+                <h3 className="text-2xl font-bold upperlower tracking-tight max-w-[150px]">
                   Creative art design
                 </h3>
                 <div className="w-10 h-10 rounded-none border border-white/20 flex items-center justify-center hover:bg-[#f26b2c] hover:border-[#f26b2c] transition-all duration-300">
@@ -322,7 +322,7 @@ export default function AboutPage() {
                   <h3 className="text-5xl font-black tracking-tighter">
                     <AnimatedCounter value={25} suffix="k+" />
                   </h3>
-                  <p className="text-xs font-semibold tracking-wider uppercase opacity-90">
+                  <p className="text-xs font-semibold tracking-wider upperlower opacity-90">
                     Happy customers
                   </p>
                 </div>
@@ -405,7 +405,7 @@ export default function AboutPage() {
                   <h3 className="text-5xl font-black tracking-tighter">
                     <AnimatedCounter value={99} suffix="%" />
                   </h3>
-                  <p className="text-xs font-semibold tracking-wider uppercase opacity-90">
+                  <p className="text-xs font-semibold tracking-wider upperlower opacity-90">
                     Customer satisfaction rate
                   </p>
                 </div>
@@ -427,12 +427,12 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column Text */}
           <div className="lg:col-span-7 space-y-8 text-left">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase text-black leading-[1.1] tracking-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black upperlower text-black leading-[1.1] tracking-tight">
               Creativity with purpose building brands that people trust admire and remember
             </h2>
 
             {/* Premium Interactive Button with Sliding Text and straight corners */}
-            <button className="group relative inline-flex h-[48px] items-center justify-center overflow-hidden rounded-none bg-black px-8 text-[11px] font-bold uppercase tracking-widest text-white transition-colors duration-300 cursor-pointer border border-transparent">
+            <button className="group relative inline-flex h-[48px] items-center justify-center overflow-hidden rounded-none bg-black px-8 text-[11px] font-bold upperlower tracking-widest text-white transition-colors duration-300 cursor-pointer border border-transparent">
               {/* Orange sliding background on hover */}
               <span className="absolute inset-0 h-full w-full translate-y-full bg-[#f26b2c] transition-transform duration-300 ease-out group-hover:translate-y-0" />
 
@@ -479,7 +479,7 @@ export default function AboutPage() {
 
         {/* Big "Crafting" Text overlay */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-          <h2 className="text-4xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-black text-white/90 select-none uppercase tracking-tighter font-sans">
+          <h2 className="text-4xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-black text-white/90 select-none upperlower tracking-tighter font-sans">
             Crafting
           </h2>
         </div>
@@ -527,10 +527,10 @@ export default function AboutPage() {
 
             {/* Right Column: Process Accordions */}
             <div className="lg:col-span-7 flex flex-col justify-center text-left py-4">
-              <span className="text-[10px] tracking-[0.25em] text-[#f26b2c] font-bold uppercase block mb-4">
+              <span className="text-[10px] tracking-[0.25em] text-[#f26b2c] font-bold upperlower block mb-4">
                 Our Process
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black uppercase text-white leading-none tracking-tight mb-12">
+              <h2 className="text-3xl sm:text-5xl font-black upperlower text-white leading-none tracking-tight mb-12">
                 Workflow engineered for perfection
               </h2>
 
@@ -552,7 +552,7 @@ export default function AboutPage() {
                           {step.num}
                         </span>
                         <h3
-                          className={`text-xl sm:text-2xl md:text-3xl font-extrabold uppercase transition-all duration-300 tracking-tight ${
+                          className={`text-xl sm:text-2xl md:text-3xl font-extrabold upperlower transition-all duration-300 tracking-tight ${
                             isActive
                               ? "text-white translate-x-3 scale-[1.02]"
                               : "text-neutral-500 group-hover:text-neutral-300"
@@ -583,7 +583,7 @@ export default function AboutPage() {
 
       {/* SECTION 7: CLIENTS LOGO WALL - STRAIGHT CORNERS AND ADVANCED SLIDING HOVER EFFECT */}
       <section className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-black uppercase tracking-tight text-center mb-12 hover:text-white transition-colors duration-300 cursor-pointer">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-black upperlower tracking-tight text-center mb-12 hover:text-white transition-colors duration-300 cursor-pointer">
           Creative solutions powered by lasting client trust
         </h2>
 
@@ -619,12 +619,12 @@ export default function AboutPage() {
               {/* Sliding Text Block Container */}
               <div className="relative overflow-hidden h-7 w-full flex flex-col items-center justify-center select-none">
                 {/* First Word: Slides up and out */}
-                <span className="block font-display font-black text-xl md:text-2xl uppercase tracking-tighter opacity-70 group-hover:opacity-100 group-hover:text-white transition-all duration-300 transform group-hover:-translate-y-full">
+                <span className="block font-display font-black text-xl md:text-2xl upperlower tracking-tighter opacity-70 group-hover:opacity-100 group-hover:text-white transition-all duration-300 transform group-hover:-translate-y-full">
                   {client.label}
                 </span>
 
                 {/* Second Word: Slides up into center and turns white */}
-                <span className="absolute font-display font-black text-xl md:text-2xl uppercase tracking-tighter text-white opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0">
+                <span className="absolute font-display font-black text-xl md:text-2xl upperlower tracking-tighter text-white opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0">
                   {client.label}
                 </span>
               </div>

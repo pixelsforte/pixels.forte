@@ -54,7 +54,7 @@ export default function Home() {
           <AboutPage />
         ) : (
           <div className="min-h-[60vh] flex flex-col items-center justify-center py-20 bg-[#f4f1ea]">
-            <h2 className="text-2xl font-bold uppercase tracking-widest text-[#f26b2c] mb-4">Page Coming Soon</h2>
+            <h2 className="text-2xl font-bold upperlower tracking-widest text-[#f26b2c] mb-4">Page Coming Soon</h2>
             <p className="text-sm text-neutral-500 font-medium">This page is currently being designed and developed.</p>
           </div>
         )}

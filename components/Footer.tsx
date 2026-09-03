@@ -35,7 +35,7 @@ export default function Footer() {
               <div className="relative h-[68px] sm:h-[86px] md:h-[98px] w-[192px] sm:w-[242px] md:w-[276px]">
                 <Image
                   src="/logo-1.png"
-                  alt="Pixelforte wordmark"
+                  alt="Pixels Forte wordmark"
                   fill
                   className="object-contain object-left"
                   priority

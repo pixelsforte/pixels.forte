@@ -62,7 +62,7 @@ function ScrollCard({ project }: { project: typeof PORTFOLIO_ONE_PROJECTS[0] }) 
 
         {/* Floating Category Tag */}
         <div className="absolute top-6 left-6">
-          <span className="px-4 py-1.5 rounded-full bg-black/70 text-white text-xs font-mono font-bold tracking-wider uppercase backdrop-blur-md border border-white/20">
+          <span className="px-4 py-1.5 rounded-full bg-black/70 text-white text-xs font-mono font-bold tracking-wider Upperlower backdrop-blur-md border border-white/20">
             {project.category}
           </span>
         </div>
@@ -71,14 +71,14 @@ function ScrollCard({ project }: { project: typeof PORTFOLIO_ONE_PROJECTS[0] }) 
       {/* Centered title below card */}
       <div className="mt-5 text-center space-y-1">
         <h3 
-          className="text-2xl sm:text-3.5xl font-black text-black uppercase tracking-tight hover:text-[#f26b2c] transition-colors cursor-pointer"
+          className="text-2xl sm:text-3.5xl font-black text-black Upperlower tracking-tight hover:text-[#f26b2c] transition-colors cursor-pointer"
           onClick={() => {
             router.push(`/portfolio-details?id=${project.id}`);
           }}
         >
           {project.title}
         </h3>
-        <p className="text-xs font-mono text-neutral-500 font-bold uppercase tracking-widest">
+        <p className="text-xs font-mono text-neutral-500 font-bold Upperlower tracking-widest">
           {project.subtitle}
         </p>
       </div>
@@ -112,10 +112,10 @@ export default function PortfolioOnePage() {
       <main className="w-full bg-[#f4f1ea] text-black min-h-screen pt-20 pb-24 overflow-hidden">
         {/* HERO TITLE SECTION */}
         <div className="max-w-4xl mx-auto text-center space-y-3 mt-8 mb-12 px-6">
-          <span className="text-[10px] font-mono tracking-[0.25em] text-neutral-400 uppercase font-black">
+          <span className="text-[10px] font-mono tracking-[0.25em] text-neutral-400 Upperlower font-black">
             PORTFOLIO SHOWCASE
           </span>
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-black tracking-tight leading-none uppercase">
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-black tracking-tight leading-none Upperlower">
             Our Work
           </h1>
 

@@ -191,7 +191,7 @@ export default function ServicesTwoPage() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-[11px] font-bold tracking-[0.3em] text-white/90 uppercase mb-3 font-mono"
+              className="text-[11px] font-bold tracking-[0.3em] text-white/90 Upperlower mb-3 font-mono"
             >
               WHAT WE CREATE
             </motion.p>
@@ -199,7 +199,7 @@ export default function ServicesTwoPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-4xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight uppercase"
+              className="text-4xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight Upperlower"
             >
               Our service
             </motion.h1>
@@ -226,7 +226,7 @@ export default function ServicesTwoPage() {
             {/* Right Column: Sliding Content Container */}
             <div className="lg:col-span-6 space-y-12">
               <div>
-                <span className="text-[10px] font-mono tracking-[0.25em] text-[#f26b2c] uppercase font-black">
+                <span className="text-[10px] font-mono tracking-[0.25em] text-[#f26b2c] Upperlower font-black">
                   WHAT WE CREATE
                 </span>
                 
@@ -238,7 +238,7 @@ export default function ServicesTwoPage() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -30 }}
                       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                      className="text-3xl sm:text-4xl lg:text-5xl font-black text-black leading-tight uppercase tracking-tight"
+                      className="text-3xl sm:text-4xl lg:text-5xl font-black text-black leading-tight Upperlower tracking-tight"
                     >
                       {SLIDER_ITEMS[slideIndex].title}
                     </motion.h2>
@@ -310,14 +310,14 @@ export default function ServicesTwoPage() {
             
             {/* Left side text column */}
             <div className="lg:col-span-5 lg:sticky lg:top-24 space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-xs text-neutral-800 font-bold uppercase tracking-wider shadow-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-xs text-neutral-800 font-bold Upperlower tracking-wider shadow-sm">
                 <span className="w-4 h-4 rounded-full bg-[#f26b2c] flex items-center justify-center text-[10px] text-white font-black">
                   +
                 </span>
                 <span>Our Service</span>
               </div>
 
-              <h2 className="text-4xl sm:text-5xl font-black text-black leading-tight uppercase tracking-tight">
+              <h2 className="text-4xl sm:text-5xl font-black text-black leading-tight Upperlower tracking-tight">
                 Crafting memorable brand experiences from strategy to execution
               </h2>
 
@@ -328,7 +328,7 @@ export default function ServicesTwoPage() {
               {/* Black to Orange Button */}
               <button
                 onClick={() => router.push("/portfolio-details")}
-                className="group inline-flex items-center gap-2.5 bg-black hover:bg-[#f26b2c] text-white px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-md transition-all duration-300"
+                className="group inline-flex items-center gap-2.5 bg-black hover:bg-[#f26b2c] text-white px-7 py-4 rounded-full text-xs font-bold Upperlower tracking-wider shadow-md transition-all duration-300"
               >
                 <span>Elevate your brand</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -350,7 +350,7 @@ export default function ServicesTwoPage() {
                     onClick={() => router.push("/portfolio-details")}
                   >
                     <div className="flex justify-between items-center border-b border-black/10 pb-6">
-                      <h3 className="text-2xl sm:text-3xl font-black uppercase text-black tracking-tight">
+                      <h3 className="text-2xl sm:text-3xl font-black Upperlower text-black tracking-tight">
                         {card.title}
                       </h3>
                       <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center">
@@ -385,13 +385,13 @@ export default function ServicesTwoPage() {
             
             {/* Header info */}
             <div className="space-y-4 max-w-3xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-xs text-neutral-800 font-bold uppercase tracking-wider shadow-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-xs text-neutral-800 font-bold Upperlower tracking-wider shadow-sm">
                 <span className="w-4 h-4 rounded-full bg-[#f26b2c] flex items-center justify-center text-[10px] text-white font-black">
                   +
                 </span>
                 <span>Our Impact</span>
               </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black leading-tight uppercase tracking-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black leading-tight Upperlower tracking-tight">
                 Creativity that delivers measurable results and drives brand success
               </h2>
             </div>
@@ -402,7 +402,7 @@ export default function ServicesTwoPage() {
                 <h3 className="text-4xl sm:text-5xl font-black text-black tracking-tight">
                   <AnimatedCounter value={20} prefix="+ " suffix="K" />
                 </h3>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#f26b2c] block">
+                <span className="text-xs font-bold Upperlower tracking-widest text-[#f26b2c] block">
                   Successful projects
                 </span>
                 <p className="text-xs text-neutral-500 font-semibold leading-relaxed">
@@ -414,7 +414,7 @@ export default function ServicesTwoPage() {
                 <h3 className="text-4xl sm:text-5xl font-black text-black tracking-tight">
                   <AnimatedCounter value={8} prefix="+ " suffix="K" />
                 </h3>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#f26b2c] block">
+                <span className="text-xs font-bold Upperlower tracking-widest text-[#f26b2c] block">
                   Satisfied clients
                 </span>
                 <p className="text-xs text-neutral-500 font-semibold leading-relaxed">
@@ -426,7 +426,7 @@ export default function ServicesTwoPage() {
                 <h3 className="text-4xl sm:text-5xl font-black text-black tracking-tight">
                   <AnimatedCounter value={22} prefix="+ " />
                 </h3>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#f26b2c] block">
+                <span className="text-xs font-bold Upperlower tracking-widest text-[#f26b2c] block">
                   Years of experience
                 </span>
                 <p className="text-xs text-neutral-500 font-semibold leading-relaxed">
@@ -464,14 +464,14 @@ export default function ServicesTwoPage() {
                 <motion.div style={{ opacity: p1ContentOpacity }} className="relative z-10 p-10 sm:p-16 h-full flex flex-col justify-between">
                   {/* Header / Text on top */}
                   <div className="space-y-6 max-w-xl">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-1.5 text-xs text-white font-bold uppercase tracking-wider shadow-sm">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-1.5 text-xs text-white font-bold Upperlower tracking-wider shadow-sm">
                       <span className="w-4 h-4 rounded-full bg-[#f26b2c] flex items-center justify-center text-[10px] text-white font-black">
                         +
                       </span>
                       <span>Our Impact</span>
                     </div>
                     
-                    <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight uppercase tracking-tight">
+                    <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight Upperlower tracking-tight">
                       Impactful brand experiences that build recognition and lasting connections
                     </h2>
                   </div>
@@ -480,7 +480,7 @@ export default function ServicesTwoPage() {
                   <div>
                     <button
                       onClick={() => router.push("/portfolio-details")}
-                      className="group inline-flex items-center gap-2.5 bg-[#f26b2c] hover:bg-white hover:text-black text-white px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-md transition-all duration-300"
+                      className="group inline-flex items-center gap-2.5 bg-[#f26b2c] hover:bg-white hover:text-black text-white px-7 py-4 rounded-full text-xs font-bold Upperlower tracking-wider shadow-md transition-all duration-300"
                     >
                       <span>Boost your brand</span>
                       <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -490,10 +490,10 @@ export default function ServicesTwoPage() {
 
                 {/* Bottom Card Identity Label (Visible when Panel 1 is open or closing) */}
                 <motion.div style={{ opacity: p1TextOpacity }} className="absolute bottom-10 left-10 z-20 pointer-events-none">
-                  <h4 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight">
+                  <h4 className="text-2xl sm:text-4xl font-black Upperlower text-white tracking-tight">
                     Markivo
                   </h4>
-                  <span className="text-[10px] sm:text-xs font-mono uppercase text-white/70 tracking-widest font-bold">
+                  <span className="text-[10px] sm:text-xs font-mono Upperlower text-white/70 tracking-widest font-bold">
                     Design & Campaign
                   </span>
                 </motion.div>
@@ -520,10 +520,10 @@ export default function ServicesTwoPage() {
 
                 {/* Bottom Card Identity Label */}
                 <motion.div style={{ opacity: p2TextOpacity }} className="absolute bottom-10 left-10 z-20 p-6 pointer-events-none">
-                  <h4 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight">
+                  <h4 className="text-2xl sm:text-4xl font-black Upperlower text-white tracking-tight">
                     Creativo
                   </h4>
-                  <span className="text-[10px] sm:text-xs font-mono uppercase text-white/70 tracking-widest font-bold">
+                  <span className="text-[10px] sm:text-xs font-mono Upperlower text-white/70 tracking-widest font-bold">
                     Brand Strategy
                   </span>
                 </motion.div>
@@ -550,10 +550,10 @@ export default function ServicesTwoPage() {
 
                 {/* Bottom Card Identity Label */}
                 <motion.div style={{ opacity: p3TextOpacity }} className="absolute bottom-10 left-10 z-20 p-6 pointer-events-none">
-                  <h4 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight">
+                  <h4 className="text-2xl sm:text-4xl font-black Upperlower text-white tracking-tight">
                     Vibe
                   </h4>
-                  <span className="text-[10px] sm:text-xs font-mono uppercase text-white/70 tracking-widest font-bold">
+                  <span className="text-[10px] sm:text-xs font-mono Upperlower text-white/70 tracking-widest font-bold">
                     Digital Identity
                   </span>
                 </motion.div>
@@ -611,7 +611,7 @@ export default function ServicesTwoPage() {
 
             {/* Right side capabilities list */}
             <div className="lg:col-span-7 space-y-12">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight uppercase tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight Upperlower tracking-tight">
                 We create standout brands engaging content and digital experiences people love
               </h2>
 
@@ -633,7 +633,7 @@ export default function ServicesTwoPage() {
                       <span className="text-xs font-mono text-[#f26b2c] font-black group-hover:text-black transition-colors duration-300">
                         {item.num}
                       </span>
-                      <h3 className="text-md sm:text-lg font-bold uppercase tracking-tight text-white group-hover:text-black transition-colors duration-300">
+                      <h3 className="text-md sm:text-lg font-bold Upperlower tracking-tight text-white group-hover:text-black transition-colors duration-300">
                         {item.name}
                       </h3>
                     </div>
@@ -657,20 +657,20 @@ export default function ServicesTwoPage() {
             {/* Header block */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-xs text-neutral-800 font-bold uppercase tracking-wider shadow-sm">
+                <div className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-xs text-neutral-800 font-bold Upperlower tracking-wider shadow-sm">
                   <span className="w-4 h-4 rounded-full bg-[#f26b2c] flex items-center justify-center text-[10px] text-white font-black">
                     +
                   </span>
                   <span>Our Latest Post</span>
                 </div>
-                <h2 className="text-4xl sm:text-5xl font-black text-black tracking-tight leading-none uppercase max-w-2xl">
+                <h2 className="text-4xl sm:text-5xl font-black text-black tracking-tight leading-none upperlower max-w-2xl">
                   Our research and insights about creative innovation
                 </h2>
               </div>
               
               <button
                 onClick={() => router.push("/portfolio-details")}
-                className="group shrink-0 inline-flex items-center gap-2 border border-black/15 bg-transparent px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-all duration-300"
+                className="group shrink-0 inline-flex items-center gap-2 border border-black/15 bg-transparent px-6 py-3 rounded-full text-xs font-bold Upperlower tracking-wider hover:bg-black hover:text-white transition-all duration-300"
               >
                 <span>Read all articles</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -708,10 +708,10 @@ export default function ServicesTwoPage() {
                   className="bg-white border border-black/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer flex flex-col justify-between p-6 h-full min-h-[480px]"
                 >
                   <div className="space-y-4">
-                    <span className="text-[10px] font-mono tracking-widest text-[#f26b2c] font-bold block uppercase">
+                    <span className="text-[10px] font-mono tracking-widest text-[#f26b2c] font-bold block Upperlower">
                       {blog.date}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-black uppercase text-black tracking-tight leading-tight group-hover:text-[#f26b2c] transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-black Upperlower text-black tracking-tight leading-tight group-hover:text-[#f26b2c] transition-colors duration-300">
                       {blog.title}
                     </h3>
                   </div>
@@ -737,10 +737,10 @@ export default function ServicesTwoPage() {
                       />
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-black uppercase block tracking-tight">
+                      <span className="text-xs font-bold text-black Upperlower block tracking-tight">
                         {blog.author}
                       </span>
-                      <span className="text-[9px] font-mono uppercase text-neutral-400 font-bold block">
+                      <span className="text-[9px] font-mono Upperlower text-neutral-400 font-bold block">
                         Creative Writer
                       </span>
                     </div>
