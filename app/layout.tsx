@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   title: "Pixels Forte | Creative Agency",
   description: "Creative agency portfolio website.",
   icons: {
-    icon: "/Pixels Forte Logo-03.png",
-    shortcut: "/Pixels Forte Logo-03.png",
-    apple: "/Pixels Forte Logo-03.png",
+    icon: "/Logo.png",
+    shortcut: "/Logo.png.png",
+    apple: "/Logo.png.png",
   },
 };
 
@@ -72,9 +72,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${parkinsans.variable} ${inter.variable}`}>
       <head>
-        <link rel="icon" href="/Pixels Forte Logo-03.png" type="image/png" />
-        <link rel="shortcut icon" href="/Pixels Forte Logo-03.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/Pixels Forte Logo-03.png" />
+        <link rel="icon" href="/Logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/Logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/Logo.png" />
         {/* Priority Preloading for Above-the-Fold Hero Media */}
         <link rel="preload" href="/images/card1.webp" as="image" type="image/webp" fetchPriority="high" />
         <link rel="preload" href="/videos/card5-1-1.mp4" as="video" type="video/mp4" fetchPriority="high" />
