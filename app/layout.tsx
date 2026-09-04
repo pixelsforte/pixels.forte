@@ -72,9 +72,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${parkinsans.variable} ${inter.variable}`}>
       <head>
-        <link rel="icon" href="/logo-3.png" type="image/png" />
-        <link rel="shortcut icon" href="/logo-3.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo-3.png" />
+        <link rel="icon" href="/Pixels Forte Logo-03.png" type="image/png" />
+        <link rel="shortcut icon" href="/Pixels Forte Logo-03.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/Pixels Forte Logo-03.png" />
         {/* Priority Preloading for Above-the-Fold Hero Media */}
         <link rel="preload" href="/images/card1.webp" as="image" type="image/webp" fetchPriority="high" />
         <link rel="preload" href="/videos/card5-1-1.mp4" as="video" type="video/mp4" fetchPriority="high" />
