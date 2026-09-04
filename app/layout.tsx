@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   title: "Pixels Forte | Creative Agency",
   description: "Creative agency portfolio website.",
   icons: {
-    icon: "/logo-3.png",
-    shortcut: "/logo-3.png",
-    apple: "/logo-3.png",
+    icon: "/Pixels Forte Logo-03.png",
+    shortcut: "/Pixels Forte Logo-03.png",
+    apple: "/Pixels Forte Logo-03.png",
   },
 };
 
