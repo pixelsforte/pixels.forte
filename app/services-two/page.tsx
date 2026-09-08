@@ -38,7 +38,7 @@ const SLIDER_ITEMS = [
 // Overlapping Cards Data
 const OVERLAP_CARDS = [
   {
-    title: "Branding & identity",
+    title: "Branding & Identity",
     desc: "We shape compelling brand experiences built on strong strategic insight and realized through smart design, authentic storytelling, and flawless execution that ensures every detail connects and performs.",
     image: "/service/service-v3-branding.webp",
     bgColor: "bg-[#e5ddcd]",
