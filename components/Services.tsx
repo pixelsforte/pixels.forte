@@ -14,7 +14,7 @@ interface Service {
 const SERVICES: Service[] = [
   {
     n: "01",
-    title: "Branding and Design",
+    title: "Branding & Design",
     desc: "We shape cohesive brand identities and strategic design systems that define your personality, build trust, and forge lasting connections across every touchpoint.",
     img: "/images/card1.webp",
   },
