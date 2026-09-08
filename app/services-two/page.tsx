@@ -44,19 +44,25 @@ const OVERLAP_CARDS = [
     bgColor: "bg-[#e5ddcd]",
   },
   {
-    title: "Advertising & campaigns",
+    title: "Web Design",
     desc: "We craft campaigns that capture attention and drive results, combining creative concepts, compelling visuals, and strategic messaging across all channels.",
     image: "/service/service-v3-branding-v2.webp",
     bgColor: "bg-[#f3dcd4]",
   },
   {
-    title: "Content & storytelling",
+    title: "Marketing Design",
     desc: "We shape clear narratives and persuasive copy that connect with audiences, build trust and inspire action.",
     image: "/service/service-v3-branding-3.webp",
     bgColor: "bg-[#d1e0d7]",
   },
   {
-    title: "Web design & development",
+    title: "Mobile Design",
+    desc: "We design and develop seamless digital experiences that balance aesthetics, performance and scalability.",
+    image: "/service/service-v3-branding-4.webp",
+    bgColor: "bg-[#e3dcd3]",
+  },
+  {
+    title: "AI & Automation",
     desc: "We design and develop seamless digital experiences that balance aesthetics, performance and scalability.",
     image: "/service/service-v3-branding-4.webp",
     bgColor: "bg-[#e3dcd3]",
