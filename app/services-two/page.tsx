@@ -39,31 +39,31 @@ const SLIDER_ITEMS = [
 const OVERLAP_CARDS = [
   {
     title: "Branding & Design",
-    desc: "We shape compelling brand experiences built on strong strategic insight and realized through smart design, authentic storytelling, and flawless execution that ensures every detail connects and performs.",
+    desc: "We shape cohesive brand identities and strategic design systems that define your personality, build trust, and forge lasting connections across every touchpoint.",
     image: "/service/service-v3-branding.webp",
     bgColor: "bg-[#e5ddcd]",
   },
   {
     title: "Web Design",
-    desc: "We craft campaigns that capture attention and drive results, combining creative concepts, compelling visuals, and strategic messaging across all channels.",
+    desc: "We design striking, high-performance web experiences and interactive digital platforms tailored to elevate your presence and convert visitors seamlessly.",
     image: "/service/service-v3-branding-v2.webp",
     bgColor: "bg-[#f3dcd4]",
   },
   {
     title: "Marketing Design",
-    desc: "We shape clear narratives and persuasive copy that connect with audiences, build trust and inspire action.",
+    desc: "We craft high-impact marketing visuals and multi-channel campaign collateral that capture attention, deliver clear messaging, and accelerate business growth.",
     image: "/service/service-v3-branding-3.webp",
     bgColor: "bg-[#d1e0d7]",
   },
   {
     title: "Mobile Design",
-    desc: "We design and develop seamless digital experiences that balance aesthetics, performance and scalability.",
+    desc: "We engineer intuitive mobile UI/UX layouts and native responsive application designs that delight users, enhance retention, and amplify your brand ecosystem.",
     image: "/service/service-v3-branding-4.webp",
     bgColor: "bg-[#e3dcd3]",
   },
   {
     title: "AI & Automation",
-    desc: "We design and develop seamless digital experiences that balance aesthetics, performance and scalability.",
+    desc: "We deploy intelligent AI workflows and custom conversational agents that streamline customer interactions, automate repetitive tasks, and scale operational efficiency.",
     image: "/service/service-v3-branding-4.webp",
     bgColor: "bg-[#e3dcd3]",
   }
